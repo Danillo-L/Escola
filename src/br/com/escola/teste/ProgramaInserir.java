@@ -15,8 +15,8 @@ public class ProgramaInserir {
 		Professor professor = new Professor();
 		ProfessorDAO professordao = new ProfessorDAO(con);////////
 		
-		professor.setNome("Victor");
-		professor.setCurso("DS");
+		professor.setNome("Danillo");
+		professor.setCurso("RH");
 		professor.setSalario(15000);
 		System.out.println(professordao.inserir(professor));
 		

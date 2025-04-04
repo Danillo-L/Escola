@@ -57,7 +57,7 @@ public class ProfessorDAO {
 		}
 	}
 	
-	//Métodoi deletar com o where no nome
+	//Método deletar com o where no nome
 	public String deletarWhereNome(Professor professor) {
 		String sql = "delete from professor where nome = ?";
 		try {
