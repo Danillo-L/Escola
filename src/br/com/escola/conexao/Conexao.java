@@ -9,8 +9,8 @@ public class Conexao {
 	public static Connection abrirConexao() {
 		Connection con = null;
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			String url = "jdbc:mysql://localhost:3307/escola";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String url = "jdbc:mysql://localhost:3306/escola";
 			
 			//"jdbc:mysql://localhost:3306/teste","root", "*123456HAS*"
 			final String USER = "root";

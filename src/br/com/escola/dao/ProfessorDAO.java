@@ -88,4 +88,24 @@ public class ProfessorDAO {
 			return e.getMessage();
 		}
 	}
+	
+	//Método alterar
+	public String alterar(Professor professor) {
+		String sql = "update professor set curso = ?, salario = ? where nome = ?";
+		try {
+			PreparedStatement ps = getCon().prepareStatement(sql);
+			ps.setString(1,  professor.getCurso());
+			ps.setDouble(2,  professor.getSalario());
+			ps.setString(3,  professor.getNome());
+			if (ps.executeUpdate() > 0) {
+				return "Alterado com sucesso";
+			} else {
+				return "Erro ao alterar";
+			}
+		} catch (SQLException e) {
+			return e.getMessage();
+		}
+	}
+	
+	
 }
